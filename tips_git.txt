@@ -1,0 +1,39 @@
+ 
+COMANDOS USADOS PARA CONTROL DE VERSIONES EN GIT
+ 
+ cd reactor
+ git init
+ git branch -m main
+ git config --list
+ git add calculador.py
+ git commit -m "primer commit"
+ git status
+ git config user.name
+ git config user.email
+ git branch -M main
+ git remote add origin https://github.com/GEMINISUIO/reactor.git
+ git push -u origin main
+ ls -al ~/.ssh
+
+
+ CREAR CLAVES SSH
+ 
+ ssh-keygen -o -t rsa -C "email@example.com"
+ o
+ ssh-keygen -t rsa -b 4096 -C "mgsing.kgcp@gmail.com"
+
+ 
+ DESACTIVAR TODOS LOS AGENTES
+ ps -aux | grep ssh
+ kill -9 23356
+ 
+ ACTIVAR AGENTE
+ exec ssh-agent bash
+ 
+ AGREGAR LA CLAVE SSH AL AGENTE DE AUTENTICACION
+ ssh-add ~/.ssh/id_ed25519
+
+ Si ssh-add no pudo abrir una conexión con su agente de autenticación, entonces podría usar:
+ > exec ssh-agent bash
+ > eval ssh-agent -s
+ > ssh-add ~/.ssh/id_ed25519
