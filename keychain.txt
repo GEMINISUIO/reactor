@@ -1,0 +1,11 @@
+KEYCHAIN ACCESS: Se usa para gestionar y administrar las claves y usuarios.
+Instalar keychain access:
+> sudo apt-get install keychain
+> mkdir $HOME/.ssh/
+> chmod 0700 $HOME/.ssh/
+> ssh-keygen  [o]  ssh-keygen -t rsa -b 2048   [o]  ssh-keygen -t rsa
+
+> $HOME/.ssh/id_rsa – contains your private key.
+> $HOME/.ssh/id_rsa.pub – contain your public key.
+
+> scp $HOME/.ssh/id_rsa.pub
